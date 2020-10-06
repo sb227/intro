@@ -6,3 +6,84 @@
 @import url(core.css);
 @import url(common.css);
 
+.area {
+    border: 1px solid red;
+    height: 100%;
+    width: 100%;
+    background-color: #F8F8F8;
+}
+
+#cont1 {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+#cont1 h2{
+    font-size: 20vmin;
+    font-weight: 600;
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+/************************* 플러그인 *************************/
+/* 4 different background colors */
+.c0 {
+    background: #3D8087;
+}
+
+.c1 {
+    background: #F2DDB6;
+}
+
+.c2 {
+    background: #F28B30;
+}
+
+.c3 {
+    background: #D95A2B;
+}
+
+.c4 {
+    background: #D93A2B;
+}
+
+/* 5 different sizes */
+.g0 {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.g1 {
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+}
+
+.g2 {
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+}
+
+.g3 {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+}
+
+.g4 {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
+
+.parti {
+    display: block;
+    position: absolute;
+}
+/************************* 플러그인 *************************/
