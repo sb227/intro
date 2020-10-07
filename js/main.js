@@ -13,9 +13,6 @@ $(".menu").click(function () {
 })
 
 // 원 날리기~
-
-//Add random divs as sample....
-//Change numberOfDivs if you want
 var numberOfDivs = 80;
 
 // add x number of divs to page.
@@ -25,16 +22,30 @@ for (var i = 0; i < numberOfDivs; i++) {
     //Create div with class c0/c3 (color) and g0/g4 (size)
     var p = $('<div/>').addClass('c' + c).addClass('g' + g).addClass('parti');
     //Add object to body
-    $('#cont1').append(p);
-}
+    $('#main').append(p);
+} //////// for /////////////
 
-
-//This is where the magic happends!!!
-//Add css set to none because I added display:block;position:absolute; to the css.
 $('.parti').movingBubble({
     addCss: false
 });
 
 
+// 전화번호 복사
+    
+
+$('.phone').click(function() {
+  copyToClipboard('010-4073-0227');
+  alert('전화번호가 복사되었습니다!');
+});
+    
+    
 }); ////////// jQB ///////////////////////////////
 /////////////////////////////////////////////////
+function copyToClipboard(val) {
+  var t = document.createElement("textarea");
+  document.body.appendChild(t);
+  t.value = val;
+  t.select();
+  document.execCommand('copy');
+  document.body.removeChild(t);
+}
