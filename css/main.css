@@ -23,7 +23,6 @@
 #main h2{
     font-size: 20vmin;
     font-weight: 600;
-    line-height: 1;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -31,10 +30,60 @@
     z-index: 1;
 }
 
+/************************ cont1*********************/
 #cont1{
     border: 1px solid red;
-    padding-top: 10vmin;
+    padding-top: 15vmin;
+    position: relative;
 }
+
+#cont1 h3{
+    padding: 1% 0 3% 0;
+    font-size: 8vmin;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+#cont1 p{
+    margin-bottom: 15px;
+}
+
+.skill_box{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 1px solid lime;
+    background: #333;
+}
+.skill_box h4{
+    color: #fff;
+    font-size: 2vmin;
+}
+
+.skill_box li{
+    width: 100%;
+    color: #999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /************************* 플러그인 *************************/
 /* 4 different background colors */

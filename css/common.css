@@ -7,6 +7,7 @@
 .wrap {
     height: 100%;
     padding: 50px;
+    overflow: auto;
 }
 
 /************** 픽스 영역 **************/
@@ -22,7 +23,7 @@ header{
     left: 0;
     right: 0;
     height: 50px;
-    background-color: #fff;
+    background-color: red;
     transition: all .4s ease-out;
 }
 
@@ -178,7 +179,16 @@ header h1 {
     width: 100%;
 }
 
-
+/******* 푸터 고정********/
+.footer_white{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: red;
+    height: 50px;
+    width: 100%;    
+}
 
 
 
