@@ -10,6 +10,7 @@
     border: 1px solid blue;
     background-color: #F8F8F8;
     padding: 0 10%;
+    position: relative;
 }
 
 #main {
@@ -33,50 +34,130 @@
 /************************ cont1*********************/
 #cont1{
     border: 1px solid red;
-    padding-top: 15vmin;
-    position: relative;
+    padding-top: 17vmin;
 }
 
 #cont1 h3{
-    padding: 1% 0 3% 0;
+    padding: 1% 0 5% 0;
     font-size: 8vmin;
     line-height: 1.2;
     font-weight: 600;
 }
 
 #cont1 p{
-    margin-bottom: 15px;
+    border: 1px solid blue;
+    width: 40%;
+    margin-bottom: 5vmin;
+    font-size: 2vmin;
+    line-height: 1.5;
 }
 
+/************** 스킬박스 **************/
 .skill_box{
     position: absolute;
-    top: 0;
+    width: 50%;
+    top: 400px;
     right: 0;
     border: 1px solid lime;
     background: #333;
+    padding: 10vmin;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill_box div{
+    margin-bottom: 5%;
+    border: 1px solid white;
+}
+
+.skill_box div:last-child{
+    margin-bottom: 0%;
 }
 .skill_box h4{
     color: #fff;
-    font-size: 2vmin;
+    font-size: 2.5vmin;
+    padding-bottom: 3%;
 }
 
 .skill_box li{
+    font-size: 1.5vmin;
     width: 100%;
-    color: #999;
+    color: #bbb;
+    height: 23px;
+    line-height: 23px;
 }
 
+.about, .charater{
+    width: 50%;
+}
 
+.skill, .certificate{
+    width: 100%;
+}
 
+/*************** 성격************/
+.charater li{
+    text-align: center;
+    width: 33.33%;
+    border: 1px solid lime;
+}
 
+.charater li:nth-child(1),
+.charater li:nth-child(2){
+    width:50%;
+}
+/******** 자격증..************/
+.certificate span{
+    margin-right: 10%;
+}
 
+/******** 스킬 ************/
+.skill li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.skill span{
+    display: inline-block;
+    width: 60%;
+    height: 30%;
+    position: relative;
+    border: 1px solid #bbb;
+}
 
+.skill span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #bbb;
+}
 
+.skill li:nth-child(1) span::before{
+    width: 90%;
+}
 
+.skill li:nth-child(2) span::before{
+    width: 75%;
+}
 
+.skill li:nth-child(3) span::before{
+    width: 85%;
+}
 
+.skill li:nth-child(4) span::before{
+    width: 10%;
+}
 
+.skill li:nth-child(5) span::before{
+    width: 60%;
+}
 
+.skill li:nth-child(6) span::before{
+    width: 85%;
+}
 
 
 

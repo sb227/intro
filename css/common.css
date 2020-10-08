@@ -5,8 +5,10 @@
 /********* 랩 ********/
 
 .wrap {
-    height: 100%;
-    padding: 50px;
+    position: relative;
+    top: 50px;
+    height: calc(100% - 100px);
+    padding: 0 50px;
     overflow: auto;
 }
 
@@ -43,7 +45,7 @@ header h1 {
 .sns_list {
     position: fixed;
     top: 50%;
-    right: 0;
+    right: 10px;
     transform: translateY(-50%);
 }
 
@@ -181,6 +183,7 @@ header h1 {
 
 /******* 푸터 고정********/
 .footer_white{
+/*    display: none;*/
     position: fixed;
     left: 0;
     right: 0;
