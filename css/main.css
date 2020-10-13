@@ -7,7 +7,6 @@
 @import url(common.css);
 
 .area {
-    border: 1px solid blue;
     background-color: #F8F8F8;
     padding: 0 10%;
     position: relative;
@@ -21,31 +20,29 @@
     background-color: #F8F8F8;
 }
 
-#main h2{
+#main h2 {
     font-size: 20vmin;
     font-weight: 600;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     z-index: 1;
 }
 
 /************************ cont1*********************/
-#cont1{
-    border: 1px solid red;
+.area section {
     padding-top: 17vmin;
 }
 
-#cont1 h3{
+.cont_title {
     padding: 1% 0 5% 0;
     font-size: 8vmin;
     line-height: 1.2;
     font-weight: 600;
 }
 
-#cont1 p{
-    border: 1px solid blue;
+#cont1 p {
     width: 40%;
     margin-bottom: 5vmin;
     font-size: 2vmin;
@@ -53,33 +50,32 @@
 }
 
 /************** 스킬박스 **************/
-.skill_box{
+.skill_box {
     position: absolute;
     width: 50%;
     top: 400px;
     right: 0;
-    border: 1px solid lime;
-    background: #333;
+    background: #222;
     padding: 10vmin;
     display: flex;
     flex-wrap: wrap;
 }
 
-.skill_box div{
+.skill_box div {
     margin-bottom: 5%;
-    border: 1px solid white;
 }
 
-.skill_box div:last-child{
+.skill_box div:last-child {
     margin-bottom: 0%;
 }
-.skill_box h4{
+
+.skill_box h4 {
     color: #fff;
     font-size: 2.5vmin;
     padding-bottom: 3%;
 }
 
-.skill_box li{
+.skill_box li {
     font-size: 1.5vmin;
     width: 100%;
     color: #bbb;
@@ -87,38 +83,34 @@
     line-height: 23px;
 }
 
-.about, .charater{
+.about,
+.charater {
     width: 50%;
 }
 
-.skill, .certificate{
+.skill,
+.certificate {
     width: 100%;
 }
 
 /*************** 성격************/
-.charater li{
-    text-align: center;
+.charater li {
     width: 33.33%;
-    border: 1px solid lime;
 }
 
-.charater li:nth-child(1),
-.charater li:nth-child(2){
-    width:50%;
-}
 /******** 자격증..************/
-.certificate span{
+.certificate span {
     margin-right: 10%;
 }
 
 /******** 스킬 ************/
-.skill li{
+.skill li {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.skill span{
+.skill span {
     display: inline-block;
     width: 60%;
     height: 30%;
@@ -126,7 +118,7 @@
     border: 1px solid #bbb;
 }
 
-.skill span::before{
+.skill span::before {
     content: '';
     position: absolute;
     top: 0;
@@ -135,37 +127,120 @@
     background: #bbb;
 }
 
-.skill li:nth-child(1) span::before{
+.skill li:nth-child(1) span::before {
     width: 90%;
 }
 
-.skill li:nth-child(2) span::before{
+.skill li:nth-child(2) span::before {
     width: 75%;
 }
 
-.skill li:nth-child(3) span::before{
+.skill li:nth-child(3) span::before {
     width: 85%;
 }
 
-.skill li:nth-child(4) span::before{
+.skill li:nth-child(4) span::before {
     width: 10%;
 }
 
-.skill li:nth-child(5) span::before{
+.skill li:nth-child(5) span::before {
     width: 60%;
 }
 
-.skill li:nth-child(6) span::before{
+.skill li:nth-child(6) span::before {
     width: 85%;
 }
 
 
+/*********************** cont2******************/
+#cont2 h3 {
+    font-family: 'Secular One', sans-serif;
+}
 
+.prjt {
+    position: relative;
+}
 
+.prjt:last-child{
+    padding-top: 5%;
+}
 
+.prjt h4 {
+    font-size: 4vmin;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #848484;
+    font-family: 'Secular One', 'Noto Sans KR';
+}
 
+.link {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 60%;
+    margin: 10% auto;
+}
 
+.link img {
+    width: 100%;
+}
 
+.circle {
+    transform: scale(.8);
+    position: absolute;
+    top: 2%;
+    right: 7%;
+}
+
+.prj_list {
+    width: 100%;
+    color: #777;
+    margin-bottom: 5%;
+}
+
+.prj_list > li {
+    width: 33.33%;
+}
+
+.prj_list > li h5{
+    font: 3vmin 'Secular One', sans-serif;
+    color: #333;
+}
+
+.prj_sub_list > li {
+    width: 100%;
+    line-height: 1.4;
+    font-size: 1.7vmin;
+}
+
+/************************************ cont3 *********/
+#cont3{
+    position: relative;
+    padding-bottom: 17vmin;
+}
+
+#cont3 p{
+    font-size: 8vmin;
+    line-height: 1.2;
+}
+
+.text{
+    padding-top: 5%;
+    font-size: 2vmin;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.text a{
+    display: block;
+    color: #222;
+}
+
+.small_circle{
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+}
 /************************* 플러그인 *************************/
 /* 4 different background colors */
 .c0 {
@@ -223,4 +298,6 @@
     display: block;
     position: absolute;
 }
+
+
 /************************* 플러그인 *************************/
