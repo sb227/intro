@@ -42,13 +42,21 @@
     font-weight: 600;
 }
 
-#cont1 p {
+#cont1 p{
     width: 40%;
     margin-bottom: 5vmin;
     font-size: 2vmin;
     line-height: 1.5;
+    position: relative;
+    opacity: 0;
+    bottom: -20px;
+    transition: all 1s;
 }
 
+#cont1 p.on{
+    opacity: 1;
+    bottom: 0;
+}
 /************** 스킬박스 **************/
 .skill_box {
     position: absolute;
@@ -116,6 +124,7 @@
     height: 30%;
     position: relative;
     border: 1px solid #bbb;
+    transition: all .4s;
 }
 
 .skill span::before {
@@ -166,11 +175,20 @@
 }
 
 .prjt h4 {
+    opacity: 0;
     font-size: 4vmin;
     font-weight: 500;
     line-height: 1.4;
     color: #848484;
     font-family: 'Secular One', 'Noto Sans KR';
+    position: relative;
+    bottom: -20px;
+    transition: all 1s;
+}
+
+.prjt h4.on {
+    opacity: 1;
+    bottom: 0;
 }
 
 .link {
@@ -234,6 +252,11 @@
 .text a{
     display: block;
     color: #222;
+    transition: all .4s;
+}
+
+.text a:hover{
+    color: #3D8087;
 }
 
 .small_circle{
