@@ -34,14 +34,10 @@ $(function (e) { /////// jQB ///////////////////////
     });
 
     // 전화번호 알림
-    $(".phone").hover(function () {
-        $(".phone_msg").animate({
-            opacity: 1
-        }, 300)
+    $(".phone img").hover(function () {
+        $(".phone_msg").show(300);
     }, function () {
-        $(".phone_msg").animate({
-            opacity: 0
-        }, 300)
+        $(".phone_msg").hide(300);
     });
 
     // 슬라이드 효과 시작
@@ -62,6 +58,7 @@ $(function (e) { /////// jQB ///////////////////////
         // cont1 위치 
         if (scTop >= itpos[0]-gap*2){
             $("#cont1 p").addClass("on");
+            $(".skill_box").addClass("on");
         } /////// if ///////////
         
         // 블루엘리펀트 위치 
@@ -69,11 +66,20 @@ $(function (e) { /////// jQB ///////////////////////
             $(".prjt").first().find("h4").addClass("on");
         } ///// if ////////////
         
-        // 샤롯데 위치 
+        // 사진 위치 
         if (scTop >= itpos[2]-gap*2){
+            $(".prj_list").first().addClass("on");
+        } ///// if ////////////
+        
+        // 샤롯데 위치 
+        if (scTop >= itpos[3]-gap*2){
             $(".prjt").last().find("h4").addClass("on");
         } ///// if ////////////
         
+        // 사진 위치 
+        if (scTop >= itpos[4]-gap*2){
+            $(".prj_list").last().addClass("on");
+        } ///// if ////////////
     }); //////// scroll ////////
 
 

@@ -6,10 +6,18 @@
 @import url(core.css);
 @import url(common.css);
 
+/* 색 */
+.D95A2B{
+    color: #D95A2B;
+}
+
+
+/*********************** 공통 ******************/
 .area {
     background-color: #F8F8F8;
     padding: 0 10%;
     position: relative;
+    overflow: hidden;
 }
 
 #main {
@@ -62,11 +70,16 @@
     position: absolute;
     width: 50%;
     top: 400px;
-    right: 0;
+    right: -50%;
     background: #222;
     padding: 10vmin;
     display: flex;
     flex-wrap: wrap;
+    transition: all 2s;
+}
+
+.skill_box.on {
+    right: 0;
 }
 
 .skill_box div {
@@ -211,9 +224,19 @@
 }
 
 .prj_list {
+    text-align: center;
     width: 100%;
     color: #777;
     margin-bottom: 5%;
+    position: relative;
+    bottom: -20px;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.prj_list.on {
+    bottom: 0;
+    opacity: 1;
 }
 
 .prj_list > li {
@@ -263,7 +286,16 @@
     position: absolute;
     right: 10%;
     bottom: 10%;
+    animation: small_circle 1s ease-out infinite alternate;
 }
+
+@keyframes small_circle{
+    to{
+        bottom: 15%;
+    }
+}
+
+
 /************************* 플러그인 *************************/
 /* 4 different background colors */
 .c0 {
