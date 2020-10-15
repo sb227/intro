@@ -81,7 +81,12 @@ $(function (e) { /////// jQB ///////////////////////
             $(".prj_list").last().addClass("on");
         } ///// if ////////////
     }); //////// scroll ////////
-
+    
+    // 스킬박스 더보기
+    $(".cert").click(function(){
+        $(".certificate").toggleClass("on");
+        $(".certificate li:nth-child(n+6)").slideToggle();
+    }); //////// click ////////////
 
 }); ////////// jQB ///////////////////////////////
 /////////////////////////////////////////////////

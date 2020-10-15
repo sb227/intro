@@ -11,6 +11,9 @@
     color: #D95A2B;
 }
 
+.D93A2B{
+    color: #D93A2B;
+}
 
 /*********************** 공통 ******************/
 .area {
@@ -53,7 +56,7 @@
 #cont1 p{
     width: 40%;
     margin-bottom: 5vmin;
-    font-size: 2vmin;
+    font-size: 1.8vmin;
     line-height: 1.5;
     position: relative;
     opacity: 0;
@@ -90,7 +93,7 @@
     margin-bottom: 0%;
 }
 
-.skill_box h4 {
+.skill_box h4, .skill_box h4 a {
     color: #fff;
     font-size: 2.5vmin;
     padding-bottom: 3%;
@@ -102,6 +105,10 @@
     color: #bbb;
     height: 23px;
     line-height: 23px;
+}
+
+.skill_box a{
+    color: #bbb;
 }
 
 .about,
@@ -120,8 +127,20 @@
 }
 
 /******** 자격증..************/
+.certificate h4 img{
+    vertical-align: 2px;
+}
+
+.certificate.on img{
+    transform:rotate(180deg);
+}
+
 .certificate span {
     margin-right: 10%;
+}
+
+.certificate li:nth-child(n+6){
+    display: none;
 }
 
 /******** 스킬 ************/
@@ -136,8 +155,8 @@
     width: 60%;
     height: 30%;
     position: relative;
-    border: 1px solid #bbb;
     transition: all .4s;
+    border: 1px solid #bbb;
 }
 
 .skill span::before {
@@ -166,7 +185,7 @@
 }
 
 .skill li:nth-child(5) span::before {
-    width: 60%;
+    width: 65%;
 }
 
 .skill li:nth-child(6) span::before {
