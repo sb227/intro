@@ -7,11 +7,11 @@
 @import url(common.css);
 
 /* 색 */
-.D95A2B{
+.D95A2B {
     color: #D95A2B;
 }
 
-.D93A2B{
+.D93A2B {
     color: #D93A2B;
 }
 
@@ -53,7 +53,7 @@
     font-weight: 600;
 }
 
-#cont1 p{
+#cont1 p {
     width: 40%;
     margin-bottom: 5vmin;
     font-size: 1.8vmin;
@@ -64,10 +64,11 @@
     transition: all 1s;
 }
 
-#cont1 p.on{
+#cont1 p.on {
     opacity: 1;
     bottom: 0;
 }
+
 /************** 스킬박스 **************/
 .skill_box {
     position: absolute;
@@ -93,7 +94,8 @@
     margin-bottom: 0%;
 }
 
-.skill_box h4, .skill_box h4 a {
+.skill_box h4,
+.skill_box h4 a {
     color: #fff;
     font-size: 2.5vmin;
     padding-bottom: 3%;
@@ -107,7 +109,7 @@
     line-height: 23px;
 }
 
-.skill_box a{
+.skill_box a {
     color: #bbb;
 }
 
@@ -127,19 +129,20 @@
 }
 
 /******** 자격증..************/
-.certificate h4 img{
-    vertical-align: 2px;
+.certificate h4 img {
+    transition: all 1s;
 }
 
-.certificate.on img{
-    transform:rotate(180deg);
+.certificate.on img,
+.certificate h4:hover img {
+    transform: rotate(135deg);
 }
 
 .certificate span {
     margin-right: 10%;
 }
 
-.certificate li:nth-child(n+6){
+.certificate li:nth-child(n+6) {
     display: none;
 }
 
@@ -202,8 +205,8 @@
     position: relative;
 }
 
-.prjt:last-child{
-    padding-top: 5%;
+.prjt:last-child {
+    margin-top: 5%;
 }
 
 .prjt h4 {
@@ -226,19 +229,65 @@
 .link {
     position: relative;
     z-index: 1;
-    display: block;
     width: 60%;
     margin: 10% auto;
 }
 
-.link img {
+.link_hover {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 1s;
+    text-align: center;
+}
+
+.link_hover ul {
+    overflow: hidden;
+    height: 100%;
+}
+
+.link_hover li {
+    width: 100%;
+    height: 25%;
+    transition: all .4s;
+}
+
+.link_hover a {
+    color: #fff;
+    font-size: 2vmin;
+}
+
+.link_hover li:nth-child(1):hover{
+    background: rgba(61, 128, 135, 0.7);
+}
+
+.link_hover li:nth-child(2):hover{
+    background: rgba(217, 90, 43, 0.7);
+}
+
+.link_hover li:nth-child(3):hover{
+    background: rgba(242, 139, 48, 0.7);
+}
+
+.link_hover li:nth-child(4):hover{
+    background: rgba(217, 58, 43, 0.7);
+}
+
+.link:hover .link_hover {
+    height: 100%;
+}
+
+.link video {
     width: 100%;
 }
 
 .circle {
     transform: scale(.8);
     position: absolute;
-    top: 2%;
+    top: 7%;
     right: 7%;
 }
 
@@ -262,7 +311,7 @@
     width: 33.33%;
 }
 
-.prj_list > li h5{
+.prj_list > li h5 {
     font: 3vmin 'Secular One', sans-serif;
     color: #333;
 }
@@ -274,42 +323,42 @@
 }
 
 /************************************ cont3 *********/
-#cont3{
+#cont3 {
     position: relative;
     padding-bottom: 17vmin;
 }
 
-#cont3 p{
+#cont3 p {
     font-size: 8vmin;
     line-height: 1.2;
 }
 
-.text{
+.text {
     padding-top: 5%;
     font-size: 2vmin;
     font-weight: 500;
     line-height: 1.4;
 }
 
-.text a{
+.text a {
     display: block;
     color: #222;
     transition: all .4s;
 }
 
-.text a:hover{
+.text a:hover {
     color: #3D8087;
 }
 
-.small_circle{
+.small_circle {
     position: absolute;
     right: 10%;
     bottom: 10%;
     animation: small_circle 1s ease-out infinite alternate;
 }
 
-@keyframes small_circle{
-    to{
+@keyframes small_circle {
+    to {
         bottom: 15%;
     }
 }
@@ -373,5 +422,32 @@
     position: absolute;
 }
 
-
 /************************* 플러그인 *************************/
+
+/************ 미디어쿼리 **************/
+@media only screen and (max-width:1024px){
+    #main h2{
+        font-size: 14vmin;
+    }
+    
+    .cont_title {
+        font-size: 6vmin;
+    }
+    
+    #cont1 p{
+        width: auto;
+    }
+    
+    .skill_box{
+        position: static;
+        width: auto;
+        margin: 0 -10%;
+    }
+    
+    #cont3 p{
+        font-size: 5vmin;
+    }
+}
+
+
+
