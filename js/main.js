@@ -2,9 +2,13 @@
 
 var hel = Array('h', 'e', 'l', 'v', 'e', 't', 'c', 'a');
 
+// 모바일인가 ?
+var mob = 0; //0-모바일 아님, 1-모바일
+if ($(window).width() <= 500) {
+    mob = 1;
+} //// if ///////////
+
 $(function (e) { /////// jQB ///////////////////////
-
-
     // 사이드 메뉴
     $(".menu").click(function (e) {
         e.preventDefault();
@@ -55,32 +59,60 @@ $(function (e) { /////// jQB ///////////////////////
     $(".wrap").scroll(function () {
         var scTop = $(this).scrollTop();
         //console.log(scTop);
+        if (!mob) { // 모바일아니면
+            // cont1 위치 
+            if (scTop >= itpos[0] - gap * 2) {
+                $("#cont1 p").addClass("on");
+                $(".skill_box").addClass("on");
+            } /////// if ///////////
 
-        // cont1 위치 
-        if (scTop >= itpos[0] - gap * 2) {
-            $("#cont1 p").addClass("on");
-            $(".skill_box").addClass("on");
-        } /////// if ///////////
+            // 블루엘리펀트 위치 
+            if (scTop >= itpos[1] - gap * 2) {
+                $(".prjt").first().find("h4").addClass("on");
+            } ///// if ////////////
 
-        // 블루엘리펀트 위치 
-        if (scTop >= itpos[1] - gap * 2) {
-            $(".prjt").first().find("h4").addClass("on");
-        } ///// if ////////////
+            // 사진 위치 
+            if (scTop >= itpos[2] - gap * 2) {
+                $(".prj_list").first().addClass("on");
+            } ///// if ////////////
 
-        // 사진 위치 
-        if (scTop >= itpos[2] - gap * 2) {
-            $(".prj_list").first().addClass("on");
-        } ///// if ////////////
+            // 샤롯데 위치 
+            if (scTop >= itpos[3] - gap * 2) {
+                $(".prjt").last().find("h4").addClass("on");
+            } ///// if ////////////
+            
+            // 사진 위치 
+            if (scTop >= itpos[4] - gap * 2) {
+                $(".prj_list").last().addClass("on");
+            } ///// if ////////////
+            
+        } else { // 모바일이면
+            // cont1 위치 
+            if (scTop >= itpos[0] - gap * 3) {
+                $("#cont1 p").addClass("on");
+                $(".skill_box").addClass("on");
+            } /////// if ///////////
 
-        // 샤롯데 위치 
-        if (scTop >= itpos[3] - gap * 2) {
-            $(".prjt").last().find("h4").addClass("on");
-        } ///// if ////////////
+            // 블루엘리펀트 위치 
+            if (scTop >= itpos[1] - gap * 3) {
+                $(".prjt").first().find("h4").addClass("on");
+            } ///// if ////////////
 
-        // 사진 위치 
-        if (scTop >= itpos[4] - gap * 2) {
-            $(".prj_list").last().addClass("on");
-        } ///// if ////////////
+            // 사진 위치 
+            if (scTop >= itpos[2] - gap * 3 ) {
+                $(".prj_list").first().addClass("on");
+            } ///// if ////////////
+
+            // 샤롯데 위치 
+            if (scTop >= itpos[3] - gap * 3) {
+                $(".prjt").last().find("h4").addClass("on");
+            } ///// if ////////////
+            
+            // 사진 위치 
+            if (scTop >= itpos[3] - gap * 2) {
+                $(".prj_list").last().addClass("on");
+            } ///// if ////////////
+        } ////// else //////////
     }); //////// scroll ////////
 
     // 스킬박스 더보기
@@ -162,6 +194,11 @@ $(function (e) { /////// jQB ///////////////////////
         }, 800, "easeOutSine"); //// animate /////////////////
     }); ////// click /////////
 
+
+    // 모바일일 때 함수
+    if (mob) {
+
+    } //////// if /////////////
 
 }); ////////// jQB ///////////////////////////////
 /////////////////////////////////////////////////

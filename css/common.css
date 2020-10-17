@@ -215,7 +215,6 @@ header h1:hover a{
 
 /******* 푸터 고정********/
 .footer_white{
-/*    display: none;*/
     position: fixed;
     left: 0;
     right: 0;
@@ -225,9 +224,20 @@ header h1:hover a{
     width: 100%;    
 }
 
-
+/************ 미디어쿼리 *************/
 @media only screen and (max-width:1024px){
     .sns_list{
         right: 0;
     }
-}
+} /* 미디어쿼리 1024 */
+
+
+@media only screen and (max-width:500px){
+    header{
+        display: none;
+    }
+    
+    .footer_white{
+        display: none;
+    }
+} /* 미디어쿼리 500 */

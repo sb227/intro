@@ -47,7 +47,7 @@
 }
 
 .cont_title {
-    padding: 1% 0 5% 0;
+    padding-top: 1%;
     font-size: 8vmin;
     line-height: 1.2;
     font-weight: 600;
@@ -73,7 +73,7 @@
 .skill_box {
     position: absolute;
     width: 50%;
-    top: 400px;
+    top: 40vmin;
     right: -50%;
     background: #222;
     padding: 10vmin;
@@ -203,10 +203,7 @@
 
 .prjt {
     position: relative;
-}
-
-.prjt:last-child {
-    margin-top: 5%;
+    margin-top: 7vmin;
 }
 
 .prjt h4 {
@@ -241,38 +238,46 @@
     height: 0;
     background: rgba(0, 0, 0, 0.5);
     transition: all 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
 .link_hover ul {
     overflow: hidden;
-    height: 100%;
+    height: 80%;
+    width: 80%;
 }
 
 .link_hover li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 25%;
     transition: all .4s;
 }
 
 .link_hover a {
+    display: block;
     color: #fff;
     font-size: 2vmin;
 }
 
-.link_hover li:nth-child(1):hover{
+.link_hover li:nth-child(1):hover {
     background: rgba(61, 128, 135, 0.7);
 }
 
-.link_hover li:nth-child(2):hover{
+.link_hover li:nth-child(2):hover {
     background: rgba(217, 90, 43, 0.7);
 }
 
-.link_hover li:nth-child(3):hover{
+.link_hover li:nth-child(3):hover {
     background: rgba(242, 139, 48, 0.7);
 }
 
-.link_hover li:nth-child(4):hover{
+.link_hover li:nth-child(4):hover {
     background: rgba(217, 58, 43, 0.7);
 }
 
@@ -425,29 +430,78 @@
 /************************* 플러그인 *************************/
 
 /************ 미디어쿼리 **************/
-@media only screen and (max-width:1024px){
-    #main h2{
+@media only screen and (max-width:1024px) {
+    #main h2 {
         font-size: 14vmin;
     }
-    
+
     .cont_title {
         font-size: 6vmin;
     }
-    
-    #cont1 p{
+
+    #cont1 p {
         width: auto;
+        margin-top: 5vmin;
     }
-    
-    .skill_box{
-        position: static;
+
+    .skill_box {
+        position: relative;
+        top: 0;
         width: auto;
         margin: 0 -10%;
     }
-    
-    #cont3 p{
+
+    #cont3 p {
         font-size: 5vmin;
+    }
+
+    .circle {
+        transform: scale(.5);
+        top: 2%;
+        right: -5%;
+    }
+    
+    .arrow{
+        width: 10%;
+    }
+    
+    .small_circle{
+        transform: scale(.8);
     }
 }
 
+/* 미디어쿼리 1024 */
 
+@media only screen and (max-width:768px) {
+    #main h2 {
+        font-size: 13vmin;
+    }
 
+    .circle {
+        transform: scale(.3);
+        top: -8%;
+        right: -14%;
+    }
+}
+
+/* 미디어쿼리 768 */
+
+@media only screen and (max-width:500px) {
+    .wrap {
+        top: 0;
+        height: 100%;
+        padding: 0;
+    }
+
+    .circle {
+        transform: scale(.2);
+        top: -25%;
+        right: -25%;
+    }
+
+    .small_circle {
+        transform: scale(.5);
+        right: 0;
+    }
+
+    /* 미디어쿼리 500 */
