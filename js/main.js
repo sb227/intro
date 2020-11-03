@@ -3,12 +3,17 @@
 var hel = Array('h', 'e', 'l', 'v', 'e', 't', 'c', 'a');
 
 // 모바일인가 ?
-var mob = 0; //0-모바일 아님, 1-모바일
+var mob = 0; //0-모바일 아님, 1-모바일, 2- 태블릿
 if ($(window).width() <= 500) {
     mob = 1;
 } //// if ///////////
+else if ($(window).width() <= 1024 && ($(window).width() > 500)) {
+    mob = 2;
+} ////////// else if ///////////////
 
 $(function (e) { /////// jQB ///////////////////////
+    console.log(mob);
+
     // 사이드 메뉴
     $(".menu").click(function (e) {
         e.preventDefault();
@@ -38,12 +43,6 @@ $(function (e) { /////// jQB ///////////////////////
         alert('전화번호가 복사되었습니다!');
     });
 
-    // 전화번호 알림
-    $(".phone img").hover(function () {
-        $(".phone_msg").fadeIn(300);
-    }, function () {
-        $(".phone_msg").fadeOut(300);
-    });
 
     // 슬라이드 효과 시작
     var itpos = [];
@@ -68,24 +67,34 @@ $(function (e) { /////// jQB ///////////////////////
 
             // 블루엘리펀트 위치 
             if (scTop >= itpos[1] - gap * 2) {
-                $(".prjt").first().find("h4").addClass("on");
+                $(".prjt").eq(0).find("h4").addClass("on");
             } ///// if ////////////
 
-            // 사진 위치 
+            // 블루 사진 위치 
             if (scTop >= itpos[2] - gap * 2) {
-                $(".prj_list").first().addClass("on");
+                $(".prj_list").eq(0).addClass("on");
             } ///// if ////////////
 
             // 샤롯데 위치 
             if (scTop >= itpos[3] - gap * 2) {
-                $(".prjt").last().find("h4").addClass("on");
+                $(".prjt").eq(1).find("h4").addClass("on");
             } ///// if ////////////
-            
-            // 사진 위치 
+
+            // 블루 사진 위치 
             if (scTop >= itpos[4] - gap * 2) {
-                $(".prj_list").last().addClass("on");
+                $(".prj_list").eq(1).addClass("on");
+            }
+
+            // 클론 위치 
+            if (scTop >= itpos[5] - gap * 2) {
+                $(".prjt").eq(2).find("h4").addClass("on");
             } ///// if ////////////
-            
+
+            // 클론 사진 위치 
+            if (scTop >= itpos[6] - gap * 2) {
+                $(".prj_list").eq(2).addClass("on");
+            } ///// if ////////////
+
         } else { // 모바일이면
             // cont1 위치 
             if (scTop >= itpos[0] - gap * 3) {
@@ -95,24 +104,34 @@ $(function (e) { /////// jQB ///////////////////////
 
             // 블루엘리펀트 위치 
             if (scTop >= itpos[1] - gap * 3) {
-                $(".prjt").first().find("h4").addClass("on");
+                $(".prjt").eq(0).find("h4").addClass("on");
             } ///// if ////////////
 
-            // 사진 위치 
-            if (scTop >= itpos[2] - gap * 3 ) {
-                $(".prj_list").first().addClass("on");
+            // 블루 사진 위치 
+            if (scTop >= itpos[2] - gap * 3) {
+                $(".prj_list").eq(0).addClass("on");
             } ///// if ////////////
 
             // 샤롯데 위치 
             if (scTop >= itpos[3] - gap * 3) {
-                $(".prjt").last().find("h4").addClass("on");
+                $(".prjt").eq(1).find("h4").addClass("on");
             } ///// if ////////////
-            
-            // 사진 위치 
-            if (scTop >= itpos[3] - gap * 2) {
-                $(".prj_list").last().addClass("on");
+
+            // 블루 사진 위치 
+            if (scTop >= itpos[4] - gap * 3) {
+                $(".prj_list").eq(1).addClass("on");
+            }
+
+            // 클론 위치 
+            if (scTop >= itpos[5] - gap * 3) {
+                $(".prjt").eq(2).find("h4").addClass("on");
             } ///// if ////////////
-        } ////// else //////////
+
+            // 클론 사진 위치 
+            if (scTop >= itpos[6] - gap * 3) {
+                $(".prj_list").eq(2).addClass("on");
+            } ///// if ////////////
+        }
     }); //////// scroll ////////
 
     // 스킬박스 더보기
@@ -129,6 +148,7 @@ $(function (e) { /////// jQB ///////////////////////
                 "정보기술자격(ITQ) A등급 - 아래한글",
                 "정보기술자격(ITQ) A등급 - 한글파워포인트",
                 "정보기술자격(ITQ) A등급 - 한글엑세스",
+                "전산회계 2급",
                 "전산회계 운용사 3급",
                 "ERP 회계정보관리사 2급",
                 "무역영어 3급",
@@ -144,6 +164,7 @@ $(function (e) { /////// jQB ///////////////////////
                 "2016.12.01",
                 "2017.03.16",
                 "2018.11.01",
+                "2017.04.27",
                 "2018.04.26",
                 "2018.06.12",
                 "2018.10.11",
@@ -164,6 +185,8 @@ $(function (e) { /////// jQB ///////////////////////
                 cert[i] +
                 "</li>");
     }
+
+    // 메뉴 클릭을 위해 페이지 위치 구하기
     var pgnum = $(".pgpos").length;
     console.log("cont 개수 : " + pgnum);
     var pgpos = [];
@@ -194,13 +217,85 @@ $(function (e) { /////// jQB ///////////////////////
         }, 800, "easeOutSine"); //// animate /////////////////
     }); ////// click /////////
 
+    // 클론코딩 내용
+    var title = [
+                    "하나투어",
+                    "수학박사",
+                    "알티오라",
+                    "인디고",
+                    "로와맘(Mobile Only)",
+                    "수행코디",
+                    "마이로컬푸드",
+                    "라임잉글리시",
+                    "강원삼삼코리아",
+                    "트래터",
+                ]
+    var cont = [
+                    "HTMl, CSS, JavaScript",
+                    "HTMl, CSS, Media Queries",
+                    "HTMl, CSS, Media Queries",
+                    "HTMl, CSS, Media Queries",
+                    "HTMl, CSS",
+                    "HTMl, CSS",
+                    "HTMl, CSS",
+                    "HTMl, CSS",
+                    "HTMl, CSS",
+                    "HTMl, CSS",
+                ]
+    var page = [
+                "Main",
+                "Main, Sub1",
+                "Main",
+                "Main",
+                "Main, Sub1, Sub2",
+                "Intro, Main, Sub1, Sub2",
+                "Main, Sub1",
+                "Main",
+                "Main",
+                "Main",
+                ]
 
-    // 모바일일 때 함수
-    if (mob) {
-        $(".menu").click(function(){
+    // 배열 갯수
+    var clone = $(".clone li").length;
+    console.log(clone);
+    // 포문
+    for (i = 0; i < clone; i++) {
+        $(".clone_box").eq(i)
+            .append("<li>" +
+                title[i] +
+                "</li>" +
+                "<li>" +
+                cont[i] +
+                "</li>" +
+                "<li>" +
+                page[i] +
+                "</li>");
+    } /////////////// for ////////////////
+
+
+    // 모바일 아닐 때- 모바일 일 때가 다른 경우
+    if (mob === 0) { // 모바일아니고 pc일때만
+        // 전화번호 알림 보이기
+        $(".phone img").hover(function () {
+            $(".phone_msg").fadeIn(300);
+        }, function () { // 알림 사라지기
+            $(".phone_msg").fadeOut(300);
+        }); ///////// hover ///////
+
+        // 클론코딩 박스 슬라이드 되게하기 위해 일단 닫기
+        $(".clone_box").fadeOut();
+        // 클론코딩 호버시 나오게 하기
+        $(".prj_list.clone li").hover(function () {
+            $(this).find(".clone_box").fadeIn();
+        }, function () {
+            $(this).find(".clone_box").fadeOut();
+        }); /////// hover //////////
+    } else if (mob === 1) { // 모바일일 때 함수
+        // 메뉴 클릭시 디자인 다르게
+        $(".menu").click(function () {
             $(".sns_list").toggleClass("on");
         }); //////////// click //////////
-    } //////// if /////////////
+    } //////// else /////////////
 
 }); ////////// jQB ///////////////////////////////
 /////////////////////////////////////////////////

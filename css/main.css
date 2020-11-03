@@ -56,7 +56,7 @@
 #cont1 p {
     width: 40%;
     margin: 5vmin 0;
-    font-size: 2vmin;
+    font-size: 2.5vmin;
     line-height: 1.5;
     position: relative;
     opacity: 0;
@@ -324,6 +324,9 @@
     bottom: -20px;
     opacity: 0;
     transition: all 1s;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .prj_list.on {
@@ -332,19 +335,60 @@
 }
 
 .prj_list > li {
-    width: 33.33%;
+    width: 30%;
+    margin-bottom: 3%;
 }
 
 .prj_list > li h5 {
     font: 3vmin 'Secular One', sans-serif;
     color: #333;
+    margin-bottom: 3%;
 }
 
 .prj_sub_list > li {
     width: 100%;
-    line-height: 1.4;
-    font-size: 1.7vmin;
+    line-height: 1.7;
+    font-size: 2vmin;
 }
+
+.prj_list.clone {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10% auto;
+}
+
+.prj_list.clone > li {
+    position: relative;
+    width: 32%;
+}
+
+.prj_list.clone li img {
+    width: 100%;
+    opacity: .8;
+}
+
+.clone_box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+    padding-top: 40%;
+}
+
+.clone_box li{
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 2.5vmin;
+}
+
+
+
+
 
 /************************************ cont3 *********/
 #cont3 {
@@ -541,6 +585,11 @@
         top: -8%;
         right: -14%;
     }
+
+    .prj_list > li {
+        width: 45%;
+        text-align: left;
+    }
 }
 
 /* 미디어쿼리 768 */
@@ -574,6 +623,14 @@
 
     .link {
         width: 70%;
+    }
+
+    .prj_list > li {
+        width: 100%;
+    }
+
+    .prj_list.clone > li {
+        width: 48%;
     }
 }
 
