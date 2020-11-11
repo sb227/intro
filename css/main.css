@@ -351,6 +351,10 @@
     font-size: 2vmin;
 }
 
+.prj_list.clone a{
+    display: block;
+}
+
 .prj_list.clone {
     display: flex;
     flex-wrap: wrap;
@@ -566,11 +570,11 @@
         background: rgba(242, 139, 48, 0.7);
     }
 
-    .link_hover li:last-child {
+    .link_hover li:nth-child(4) {
         background: rgba(217, 58, 43, 0.7);
         margin-right: 0;
     }
-
+    
 }
 
 /* 미디어쿼리 1024 */

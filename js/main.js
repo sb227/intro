@@ -250,7 +250,7 @@ $(function (e) { /////// jQB ///////////////////////
                 "Main, Sub1, Sub2",
                 "Intro, Main, Sub1, Sub2",
                 "Main, Sub1",
-                "Main",
+                "Main, Sub1",
                 "Main",
                 "Main",
                 ]
@@ -297,6 +297,91 @@ $(function (e) { /////// jQB ///////////////////////
         }); //////////// click //////////
     } //////// else /////////////
 
+    // 클릭 걸기
+    
+    // blue 클릭시
+    $(".blue li").eq(0).find("a").click(function(e){
+        e.preventDefault();
+        location.href="portfolio2/index.html";
+    }); ///// click ////////////
+    
+    $(".blue li").eq(1).find("a").click(function(e){
+        e.preventDefault();
+        location.href="portfolio2/gallery.html";
+    }); ///// click ////////////
+    
+    $(".blue li").eq(2).find("a").click(function(e){
+        e.preventDefault();
+        location.href="portfolio2/list.html";
+    }); ///// click ////////////
+    
+    $(".blue li").eq(3).find("a").click(function(e){
+        e.preventDefault();
+        location.href="portfolio2/show.html";
+    }); ///// click ////////////
+    
+    // lotte 클릭시
+    $(".lotte li").eq(0).find("a").click(function(e){
+        e.preventDefault();
+        location.href="portfolio1/index.html";
+    }); ///// click ////////////
+    
+    // clone 클릭시
+    $(".clone li").eq(0).find("a").click(function(e){
+        e.preventDefault();
+        location.href="clone/hana/index.html";
+    }); ///// click ////////////
+    
+    $(".clone li").eq(1).find("a").click(function(e){
+        e.preventDefault();
+        location.href="clone/shbs/index.html";
+    }); ///// click ////////////
+    
+    $(".clone li").eq(2).find("a").click(function(e){
+        e.preventDefault();
+        location.href="clone/ator/index.html";
+    }); ///// click ////////////
+    
+    $(".clone li").eq(3).find("a").click(function(e){
+        e.preventDefault();
+        location.href="clone/indigo/index.html";
+    }); ///// click ////////////
+    
+    $(".clone li").eq(4).find("a").click(function(e){
+        e.preventDefault();
+        location.href="clone/lowamom/index.html";
+    }); ///// click ////////////
+    
+    $(".clone li").eq(5).find("a").click(function(e){
+        e.preventDefault();
+        location.href="clone/shcd/index.html";
+    }); ///// click ////////////
+    
+    $(".clone li").eq(6).find("a").click(function(e){
+        e.preventDefault();
+        location.href="clone/mylocalfood/index.html";
+    }); ///// click ////////////
+    
+    $(".clone li").eq(7).find("a").click(function(e){
+        e.preventDefault();
+        location.href="clone/lime/index.html";
+    }); ///// click ////////////
+    
+    $(".clone li").eq(8).find("a").click(function(e){
+        e.preventDefault();
+        location.href="clone/samsam/index.html";
+    }); ///// click ////////////
+    
+    $(".clone li").eq(9).find("a").click(function(e){
+        e.preventDefault();
+        location.href="clone/trater/index.html";
+    }); ///// click ////////////
+    
+    
+    
+    
+    
+    
 }); ////////// jQB ///////////////////////////////
 /////////////////////////////////////////////////
 
