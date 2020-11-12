@@ -221,7 +221,6 @@ $(function (e) { /////// jQB ///////////////////////
     var title = [
                     "하나투어",
                     "수학박사",
-                    "알티오라",
                     "인디고",
                     "로와맘(Mobile Only)",
                     "수행코디",
@@ -229,12 +228,13 @@ $(function (e) { /////// jQB ///////////////////////
                     "라임잉글리시",
                     "강원삼삼코리아",
                     "트래터",
+                    "알티오라",
                 ]
     var cont = [
                     "HTMl, CSS, JavaScript",
                     "HTMl, CSS, Media Queries",
                     "HTMl, CSS, Media Queries",
-                    "HTMl, CSS, Media Queries",
+                    "HTMl, CSS",
                     "HTMl, CSS",
                     "HTMl, CSS",
                     "HTMl, CSS",
@@ -246,11 +246,11 @@ $(function (e) { /////// jQB ///////////////////////
                 "Main",
                 "Main, Sub1",
                 "Main",
-                "Main",
                 "Main, Sub1, Sub2",
                 "Intro, Main, Sub1, Sub2",
                 "Main, Sub1",
                 "Main, Sub1",
+                "Main",
                 "Main",
                 "Main",
                 ]
@@ -286,9 +286,9 @@ $(function (e) { /////// jQB ///////////////////////
         $(".clone_box").fadeOut();
         // 클론코딩 호버시 나오게 하기
         $(".prj_list.clone li").hover(function () {
-            $(this).find(".clone_box").fadeIn();
+            $(this).find(".clone_box").stop().fadeIn();
         }, function () {
-            $(this).find(".clone_box").fadeOut();
+            $(this).find(".clone_box").stop().fadeOut();
         }); /////// hover //////////
     } else if (mob === 1) { // 모바일일 때 함수
         // 메뉴 클릭시 디자인 다르게
@@ -339,45 +339,43 @@ $(function (e) { /////// jQB ///////////////////////
     
     $(".clone li").eq(2).find("a").click(function(e){
         e.preventDefault();
-        location.href="clone/ator/index.html";
+        location.href="clone/indigo/index.html";
     }); ///// click ////////////
     
     $(".clone li").eq(3).find("a").click(function(e){
         e.preventDefault();
-        location.href="clone/indigo/index.html";
+        location.href="clone/lowamom/index.html";
     }); ///// click ////////////
     
     $(".clone li").eq(4).find("a").click(function(e){
         e.preventDefault();
-        location.href="clone/lowamom/index.html";
+        location.href="clone/shcd/index.html";
     }); ///// click ////////////
     
     $(".clone li").eq(5).find("a").click(function(e){
         e.preventDefault();
-        location.href="clone/shcd/index.html";
+        location.href="clone/mylocalfood/index.html";
     }); ///// click ////////////
     
     $(".clone li").eq(6).find("a").click(function(e){
         e.preventDefault();
-        location.href="clone/mylocalfood/index.html";
+        location.href="clone/lime/index.html";
     }); ///// click ////////////
     
     $(".clone li").eq(7).find("a").click(function(e){
         e.preventDefault();
-        location.href="clone/lime/index.html";
+        location.href="clone/samsam/index.html";
     }); ///// click ////////////
     
     $(".clone li").eq(8).find("a").click(function(e){
         e.preventDefault();
-        location.href="clone/samsam/index.html";
+        location.href="clone/trater/index.html";
     }); ///// click ////////////
     
     $(".clone li").eq(9).find("a").click(function(e){
         e.preventDefault();
-        location.href="clone/trater/index.html";
+        location.href="clone/ator/index.html";
     }); ///// click ////////////
-    
-    
     
     
     
